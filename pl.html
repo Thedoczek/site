@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PROJECT VERSION</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <style>
+
+
+/*
+Based on Minimal CSS (minimalcss.com) under the MIT license.
+*/
+
+/* Reset */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Layout */
+body { background-color: #fff; color: #333;	font: 14px/20px -apple-system, "HelveticaNeue", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+header { width: 100%; margin: 0 auto; position: relative; padding: 20px 0; margin-bottom: 20px; }
+
+nav ul { margin: 0; }
+nav ul li { display: inline; margin-right: 20px; font-size: 16px; line-height: 28px; color: #333; }
+nav ul li a { color: #333; }
+
+.container { position: relative; max-width: 90%; margin: 0 auto; }
+
+footer { border-top:1px solid #ccc; font-size:11px; line-height:26px; color:#999; }
+footer a { color:#999999; }
+footer a:hover { color:#105CB6; }
+footer ul li { display:inline; list-style:none; padding-left:20px; }
+
+/* Typography */
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 20px; margin: 10px 0; }
+h2 { font-size: 20px; line-height: 20px; margin: 10px 0; }
+h3 { font-size: 16px; line-height: 20px; margin: 10px 0; }
+h4 { font-size: 14px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 12px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 10px; line-height: 20px; margin: 10px 0; }
+h1,h2,h3,h4,h5,h6 { color: #333; }
+
+p { margin-bottom: 10px; }
+
+.float-left     { float: left; }
+.float-right    { float: right; }
+img.float-left  { float: left; margin: 0 20px 20px 0; }
+img.float-right { float: right; margin: 0 0 20px 20px; }
+img.center      { margin: 0 auto; display: block; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Misc */
+hr { background-color: #ccc; border: 0px; color: #ccc; height: 1px; margin: 8px 0 20px 0; }
+pre, code { background:#E0ECF6; display:block; margin-bottom: 20px; padding:10px; }
+
+blockquote { margin: 10px 10px 20px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/20px Georgia, Times, serif; quotes: "\201C" "\201D"; }
+blockquote p { margin: 0; }
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after  { content: close-quote; font-weight: bold; }
+
+/* List */
+ul { list-style-position:inside; }
+ol { list-style-position:inside; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th { font-weight: bold; }
+tfoot { font-style: italic; }
+
+/* Metadata part */
+
+.metadata {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+table.metadata td {
+  padding-right: 20px;
+}
+
+.stats {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.graph {
+  width: 100%;
+}
+.graph div { float: left; }
+.graph div:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.graph div:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.percent-done    { background-color: rgb(90, 228, 140); height: 10px; }
+.percent-fuzzy   { background-color: rgb(255, 167, 52); height: 10px; }
+.percent-untrans { background-color: #F1F1F1; height: 10px; }
+.legend {
+  font-size: smaller;
+  color: #aaa;
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Translations */
+table.translations {
+  width: 100%;
+  table-layout: fixed;
+}
+table.translations th, table.translations td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #E1E1E1;
+}
+table.translations th {
+  text-align: left;
+}
+table.translations th:first-child, table.translations td:first-child { padding-left: 0; }
+table.translations th:last-child, table.translations td:last-child { padding-right: 0; }
+
+.with-comments td {
+  border-bottom: none !important;
+}
+tr.comments div {
+  float: left;
+  max-width: 90%;
+  font-size: smaller;
+  color: #aaa;
+}
+tr.comments div p:last-child { margin-bottom: 0; }
+tr.comments td { padding-top: 0; }
+
+.fuzzy .tra {
+  color: rgb(218, 123, 0);
+}
+
+.msgctxt {
+  color: rgb(70, 109, 137);
+  font-size: smaller;
+  background-color: rgb(217, 232, 242);
+  border-radius: 2px;
+  padding: 2px 4px;
+  margin-right: 4px;
+}
+
+
+  </style>
+</head>
+<body>
+<div class='container'>
+<table class='metadata'>
+<tr><td>Project:</td><td>PROJECT VERSION</td></tr>
+<tr><td>Language:</td><td>Polish</td></tr>
+</table>
+<div class='stats'>
+  <div class='graph'>
+    <div class='percent-done' style='width: 100%'>&nbsp;</div>
+  </div>
+  <div class='legend'>Translated: 360 of 360 (100 %)  </div>
+</div>
+<table class='translations'>
+  <thead>
+    <tr>
+      <th>Source text — English</th>
+      <th>Translation — Polish</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='i'>
+<td class='src'  lang='en'>
+Skipped!</td>
+<td class='tra'  lang='pl'>
+Pominięto!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Version: </td>
+<td class='tra'  lang='pl'>
+Wersja: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cancel</td>
+<td class='tra'  lang='pl'>
+Anuluj</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Packages</td>
+<td class='tra'  lang='pl'>
+Paczki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Loading Objects</td>
+<td class='tra'  lang='pl'>
+Ładowanie obiektów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Loading Images</td>
+<td class='tra'  lang='pl'>
+Ładowanie obrazów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Initialising UI</td>
+<td class='tra'  lang='pl'>
+Uruchamianie interfejsu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Better Extended Editor for Portal 2</td>
+<td class='tra'  lang='pl'>
+Better Extended Editor for Portal 2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+__LANG_USE_SANS_SERIF__</td>
+<td class='tra'  lang='pl'>
+__LANG_USE_SANS_SERIF__</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Toggle all checkboxes.</td>
+<td class='tra'  lang='pl'>
+Zaznacz wszystkie pola.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ATLAS</td>
+<td class='tra'  lang='pl'>
+ATLAS</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+P-Body</td>
+<td class='tra'  lang='pl'>
+P-Body</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Chell</td>
+<td class='tra'  lang='pl'>
+Chell</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Bendy</td>
+<td class='tra'  lang='pl'>
+Bendy</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Brushes form the walls or other parts of the test chamber. If this is high, it may help to reduce the size of the map or remove intricate shapes.</td>
+<td class='tra'  lang='pl'>
+Ścieżki tworzą ściany oraz inne elementy komory testowej. Jeżeli ta wartość jest wysoka, pomóc może zmniejszenie rozmiaru mapy lub usunięcie skomplikowanych kształtów.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Entities are the things in the map that have functionality. Removing complex moving items will help reduce this. Items have their entity count listed in the item description window.
+<br>
+<br>This isn't completely accurate, some entity types are counted here but don't affect the ingame limit, while others may generate additional entities at runtime.</td>
+<td class='tra'  lang='pl'>
+Jednostki są elementami mapy posiadającymi pewną funkcję. Usunięcie dużych grup ruchomych i interaktywnych elementów zmniejszy tą wartość. Wartość jednostkowa każdego przedmiotu jest widoczna w jego oknie opisu.
+<br>
+<br>Wartość ta nie jest w pełni dokładna, niektóre typy jednostek są tu wliczane, ale nie wpływają na limit w grze, a inne mogą generować dodatkowe, niepokazane tu wartości.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Overlays are smaller images affixed to surfaces, like signs or indicator lights. Hiding complex antlines or setting them to signage will reduce this.</td>
+<td class='tra'  lang='pl'>
+Nakładki to małe obrazy umieszczane na powierzchniach, na przykład świetlne wskaźniki aktywacji. Usunięcie zawiłych grup tych wskaźników lub wymiana ich na symbole zmniejszy tą wartość.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Corridor</td>
+<td class='tra'  lang='pl'>
+Korytarz</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Randomly choose a corridor. This is saved in the puzzle data and will not change.</td>
+<td class='tra'  lang='pl'>
+Losowo wybiera korytarz. Jest on zapisywany w danych mapy i nie zmienia się przed ponownym zapisaniem.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Random</td>
+<td class='tra'  lang='pl'>
+Losuj</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Image Files</td>
+<td class='tra'  lang='pl'>
+Pliki obrazów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Options on this panel can be changed 
+<br>without exporting or restarting the game.</td>
+<td class='tra'  lang='pl'>
+Opcje w tym panelu mogą być zmieniane 
+<br>bez eksportowania lub restartowania gry.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Map Settings</td>
+<td class='tra'  lang='pl'>
+Ustawienia mapy:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compile Settings</td>
+<td class='tra'  lang='pl'>
+Ustawienia kompilatora:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thumbnail</td>
+<td class='tra'  lang='pl'>
+Miniatura mapy</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Auto</td>
+<td class='tra'  lang='pl'>
+Automatyczna</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+PeTI</td>
+<td class='tra'  lang='pl'>
+PeTI</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Custom:</td>
+<td class='tra'  lang='pl'>
+Własna:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cleanup old screenshots</td>
+<td class='tra'  lang='pl'>
+Wyczyść stare zrzuty ekranu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Override the map image to use a screenshot automatically taken from the beginning of a chamber. Press F5 to take a new screenshot. If the map has not been previewed recently (within the last few hours), the default PeTI screenshot will be used instead.</td>
+<td class='tra'  lang='pl'>
+Zastępuje domyślną miniaturę zrzutem ekranu zrobionym automatycznie na wejściu komory. Naciśnij F5, aby zrobić nowy zrzut. Jeśli nie uruchamiano podglądu mapy w ciągu kilku ostatnich godzin, zostanie użyta domyślna miniatura.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Use the normal editor view for the map preview image.</td>
+<td class='tra'  lang='pl'>
+Użyj domyślnego widoku edytora jako miniaturę mapy.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Use a custom image for the map preview image. Click the screenshot to select.
+<br>Images will be converted to JPEGs if needed.</td>
+<td class='tra'  lang='pl'>
+Użyj własnego obrazu jako miniaturę mapy. Kliknij na podgląd poniżej, aby wybrać.
+<br>Obrazy będą w razie potrzeby konwertowane do formatu JPEG.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Automatically delete unused Automatic screenshots. Disable if you want to keep things in "portal2/screenshots". </td>
+<td class='tra'  lang='pl'>
+Automatycznie usuwa niepotrzebne automatyczne zrzuty ekranu. Wyłącz, jeżeli chcesz je przechowywać w folderze "portal2/screenshots". </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Lighting:</td>
+<td class='tra'  lang='pl'>
+Oświetlenie:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fast</td>
+<td class='tra'  lang='pl'>
+Szybkie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Full</td>
+<td class='tra'  lang='pl'>
+Pełne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compile with lower-quality, fast lighting. This speeds up compile times, but does not appear as good. Some shadows may appear wrong.
+<br>When publishing, this is ignored.</td>
+<td class='tra'  lang='pl'>
+Kompiluje z szybkim oświetleniem gorszej jakości. Przyspiesza ładowanie, ale nie wygląda tak dobrze. Niektóre cienie mogą wyglądać źle.
+<br>Dotyczy tylko podglądu mapy w edytorze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compile with high-quality lighting. This looks correct, but takes longer to compute. Use if you're arranging lights.
+<br>When publishing, this is always used.</td>
+<td class='tra'  lang='pl'>
+Kompiluje z oświetleniem wysokiej jakości. Wygląda poprawnie, ale obliczanie jest dłuższe. Używaj jeżeli aranżujesz oświetlenie mapy.
+<br>Zawsze używane podczas publikowania mapy.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dump packed files to:</td>
+<td class='tra'  lang='pl'>
+Zachowuj zapakowane pliki w:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+When compiling, dump all files which were packed into the map. Useful if you're intending to edit maps in Hammer.</td>
+<td class='tra'  lang='pl'>
+Podczas kompilacji, zapisuje wszystkie zapakowane pliki do pliku mapy. Użyteczne, jeżeli zamierzać modyfikować mapy w edytorze Hammer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Last Compile:</td>
+<td class='tra'  lang='pl'>
+Ostatnia kompilacja:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Entity</td>
+<td class='tra'  lang='pl'>
+Jednostki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Overlay</td>
+<td class='tra'  lang='pl'>
+Nakładki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Refresh the compile progress bars. Press after a compile has been performed to show the new values.</td>
+<td class='tra'  lang='pl'>
+Odśwież statystyki kompilatora. Kliknij po wykonaniu nowej kompilacji, aby pokazać zaktualizowane wartości.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Brush</td>
+<td class='tra'  lang='pl'>
+Ścieżki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Voicelines:</td>
+<td class='tra'  lang='pl'>
+Ścieżki głosowe:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Use voiceline priorities</td>
+<td class='tra'  lang='pl'>
+Używaj priorytetowych ścieżek głosowych</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Only choose the highest-priority voicelines. This means more generic lines will can only be chosen if few test elements are in the map. If disabled any applicable lines will be used.</td>
+<td class='tra'  lang='pl'>
+Wybiera tylko najważniejsze ścieżki głosowe. Jeśli zaznaczone, bardziej szczegółowe ścieżki pojawią się tylko, gdy większa liczba elementów testowych pojawia się na mapie. Jeśli nie, wszystkie odpowiednie ścieżki będą użyte.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Spawn at:</td>
+<td class='tra'  lang='pl'>
+Spawn:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Entry Door</td>
+<td class='tra'  lang='pl'>
+Przy wejściu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Elevator</td>
+<td class='tra'  lang='pl'>
+W windzie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+When previewing in SP, spawn inside the entry elevator. Use this to examine the entry and exit corridors.</td>
+<td class='tra'  lang='pl'>
+Podczas podglądu w grze jednoosobowej, spawn nastąpi w wejściowej windzie. Używaj, jeśli chcesz przetestować wejściowe i wyjściowe korytarze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+When previewing in SP, spawn just before the entry door.</td>
+<td class='tra'  lang='pl'>
+Podczas podglądu w grze jednoosobowej, spawn nastąpi tuż przed drzwiami wejściowymi.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Corridor:</td>
+<td class='tra'  lang='pl'>
+Korytarz:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SP Entry:</td>
+<td class='tra'  lang='pl'>
+Wejście (1-os.):</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SP Exit:</td>
+<td class='tra'  lang='pl'>
+Wyjście (1-os.):</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Coop Exit:</td>
+<td class='tra'  lang='pl'>
+Wyjście (Koop.):</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Player Model (SP):</td>
+<td class='tra'  lang='pl'>
+Model gracza (1-os.)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compile Options</td>
+<td class='tra'  lang='pl'>
+Opcje kompilacji</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compiler Options - {}</td>
+<td class='tra'  lang='pl'>
+Opcje kompilatora - {}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Multiverse Cave</td>
+<td class='tra'  lang='pl'>
+Cave z multiwersum</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Play the Workshop Cave Johnson lines on map start.</td>
+<td class='tra'  lang='pl'>
+Odtwarza ścieżki Cave'a Johnsona na starcie mapy.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Prevent Portal Bump (fizzler)</td>
+<td class='tra'  lang='pl'>
+Zapobiegaj przeciekom portali (fizzler)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add portal bumpers to make it more difficult to portal across fizzler edges. This can prevent placing portals in tight spaces near fizzlers, or fizzle portals on activation.</td>
+<td class='tra'  lang='pl'>
+Dodaje blokadę portali, aby utrudnić położenie portali niedaleko krawędzi siatek dematerializujących. Może to zapobiec kładzeniu portali w szczelinach niedaleko siatek, albo dematerializowaniu portali podczas aktywacji.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Suppress Mid-Chamber Dialogue</td>
+<td class='tra'  lang='pl'>
+Usuń dialog w środku komory</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Disable all voicelines other than entry and exit lines.</td>
+<td class='tra'  lang='pl'>
+Wyłącza wszystkie ścieżki głosowe inne niż ścieżki wejścia i wyjścia.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Unlock Default Items</td>
+<td class='tra'  lang='pl'>
+Odblokuj domyślne przedmioty</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Allow placing and deleting the mandatory Entry/Exit Doors and Large Observation Room. Use with caution, this can have weird results!</td>
+<td class='tra'  lang='pl'>
+Umożliwia umieszczanie i usuwanie niezbędnych drzwi wejściowych i wyjściowych oraz dużego pokoju obserwacyjnego. Używaj z ostrożnością, może to powodować dziwne rezultaty!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Allow Adding Goo Mist</td>
+<td class='tra'  lang='pl'>
+Dodaj mgłę nad mazią</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add mist particles above Toxic Goo in certain styles. This can increase the entity count significantly with large, complex goo pits, so disable if needed.</td>
+<td class='tra'  lang='pl'>
+Dodaje cząsteczki mgły nad toksyczną mazią w niektórych stylach. Może to zwiększyć znacząco ilość jednostek w mapach z dużymi, złożonymi dołami z mazią, więc wyłącz, jeśli będzie to konieczne.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Light Reversible Excursion Funnels</td>
+<td class='tra'  lang='pl'>
+Światło w odwracalnych tubach transportujących</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Funnels emit a small amount of light. However, if multiple funnels are near each other and can reverse polarity, this can cause lighting issues. Disable this to prevent that by disabling lights. Non-reversible Funnels do not have this issue.</td>
+<td class='tra'  lang='pl'>
+Tuby emitują niewielką ilość światła. Jednak, gdy wiele tub jest blisko siebie i mogą one zmieniać kierunek, może to powodować błędy w oświetleniu. Odznacz, by zapobiec temu wyłączając emitowane światło. Nieodwracalne tuby nie mają tego problemu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable Shape Framing</td>
+<td class='tra'  lang='pl'>
+Włącz ramki dla znaków</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After 10 shape-type antlines are used, the signs repeat. With this enabled, colored frames will be added to distinguish them.</td>
+<td class='tra'  lang='pl'>
+Po użyciu 10 znaczników-symboli, symbole zaczną się powtarzać. Gdy ta opcja jest włączona, kolorowe ramki będą dodane, by je rozróżnić.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Default: On</td>
+<td class='tra'  lang='pl'>
+Domyślnie włączone</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Default: Off</td>
+<td class='tra'  lang='pl'>
+Domyślnie wyłączone</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Styles: Unstyled</td>
+<td class='tra'  lang='pl'>
+Style: Bez stylów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Styles: All</td>
+<td class='tra'  lang='pl'>
+Style: Wszystkie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Style: {}</li>
+  <li>Styles: {}</li>
+</ol>
+</td>
+<td class='tra'  lang='pl'>
+<ol class='plurals'>
+  <li>Styl: {}</li>
+  <li>Style: {}</li>
+  <li>Style {}:</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Style/Item Properties</td>
+<td class='tra'  lang='pl'>
+Właściwości stylów i przedmiotów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Styles</td>
+<td class='tra'  lang='pl'>
+Style</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All:</td>
+<td class='tra'  lang='pl'>
+Wszystkie:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Selected Style:</td>
+<td class='tra'  lang='pl'>
+Wybrany styl:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Other Styles:</td>
+<td class='tra'  lang='pl'>
+Pozostałe style:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Options!</td>
+<td class='tra'  lang='pl'>
+Brak opcji!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+None!</td>
+<td class='tra'  lang='pl'>
+Brak!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Items</td>
+<td class='tra'  lang='pl'>
+Przedmioty</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hide/Show the "{}" window.</td>
+<td class='tra'  lang='pl'>
+Pokaż/ukryj okno "{}"</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Export...</td>
+<td class='tra'  lang='pl'>
+Wyeksportuj...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Skyboxes</td>
+<td class='tra'  lang='pl'>
+Wybierz skybox</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The skybox decides what the area outside the chamber is like. It chooses the colour of sky (seen in some items), the style of bottomless pit (if present), as well as color of "fog" (seen in larger chambers).</td>
+<td class='tra'  lang='pl'>
+Skybox decyduje jak wygląda przestrzeń poza komorą testową. Wybiera on kolor nieba (widoczny na niektórych przedmiotach), styl bezdennej otchłani (jeśli obecna), a także kolor "mgły" (widocznej w większych komorach).</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+3D Skybox</td>
+<td class='tra'  lang='pl'>
+Skybox 3D</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fog Color</td>
+<td class='tra'  lang='pl'>
+Kolor mgły</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Additional Voice Lines</td>
+<td class='tra'  lang='pl'>
+Wybierz dodatkowe ścieżki głosowe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Voice lines choose which extra voices play as the player enters or exits a chamber. They are chosen based on which items are present in the map. The additional "Multiverse" Cave lines are controlled separately in Style Properties.</td>
+<td class='tra'  lang='pl'>
+Dodatkowe ścieżki głosowe grane podczas wykonywania komory testowej. Wybierane są na podstawie elementów testowych obecnych na mapie. Dodatkowe ścieżki Cave'a Johnsona z "Multiwersum" są wybierane osobno we właściwościach stylu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add no extra voice lines, only Multiverse Cave if enabled.</td>
+<td class='tra'  lang='pl'>
+Nie dodaje żadnych ścieżek, jedynie Cave z multiwersum, jeżeli włączone.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;Multiverse Cave only&gt;</td>
+<td class='tra'  lang='pl'>
+&lt;Tylko Cave z multiwersum&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Characters</td>
+<td class='tra'  lang='pl'>
+Postacie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Turret Shoot Monitor</td>
+<td class='tra'  lang='pl'>
+Wieżyczki strzelają w monitor</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Monitor Visuals</td>
+<td class='tra'  lang='pl'>
+Postać na monitorze</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Style</td>
+<td class='tra'  lang='pl'>
+Wybierz styl</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The Style controls many aspects of the map. It decides the materials used for walls, the appearance of entrances and exits, the design for most items as well as other settings.
+<br>
+<br>The style broadly defines the time period a chamber is set in.</td>
+<td class='tra'  lang='pl'>
+Styl kontroluje wiele aspektów mapy. Decyduje o materiałach użytych do ścian, wyglądzie wejścia i wyjścia, konstrukcji większości przedmiotów, a także o wielu innych rzeczach.
+<br>
+<br>Styl po prostu określa okres czasu, w którym rozgrywana jest komora.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Elevator Videos</td>
+<td class='tra'  lang='pl'>
+Filmy przy windzie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Elevator Video</td>
+<td class='tra'  lang='pl'>
+Wybierz film</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Set the video played on the video screens in modern Aperture elevator rooms. Not all styles feature these. If set to "None", a random video will be selected each time the map is played, like in the default PeTI.</td>
+<td class='tra'  lang='pl'>
+Wybierz film grany na ekranach w pomieszczeniach z windą w nowoczesnym Aperture. Nie wszystkie style zawierają ekrany. Jeżeli ustawony na "None", losowy film będzie wybrany za każdym razem, gdy mapa jest grana, jak w domyślnym edytorze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This style does not have a elevator video screen.</td>
+<td class='tra'  lang='pl'>
+Ten styl nie ma ekranu na film.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose a random video.</td>
+<td class='tra'  lang='pl'>
+Wybierz dowolny film.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Multiple Orientations</td>
+<td class='tra'  lang='pl'>
+Wiele orientacji</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Selected Items and Style successfully exported!</td>
+<td class='tra'  lang='pl'>
+Wyeksportowanie wybranych przedmiotów i stylu powiodło się!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>
+<br>Warning: VPK files were not exported, quit Portal 2 and Hammer to ensure editor wall previews are changed.</td>
+<td class='tra'  lang='pl'>
+
+<br>
+<br>Uwaga: Pliki VPK nie zostały wyeksportowane, wyjdź z Portal 2 i Hammer aby upewnić się, że podgląd ścian w edytorze się zmienił.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Palette "{}"</td>
+<td class='tra'  lang='pl'>
+Usuń paletę "{}"</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Save Palette</td>
+<td class='tra'  lang='pl'>
+BEE2 - Zapisz paletę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enter a name:</td>
+<td class='tra'  lang='pl'>
+Wprowadź nazwę:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This palette already exists. Overwrite?</td>
+<td class='tra'  lang='pl'>
+Ta paleta już istnieje. Nadpisać?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Are you sure you want to delete "{}"?</td>
+<td class='tra'  lang='pl'>
+Na pewno chcesz usunąć "{}"?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Clear Palette</td>
+<td class='tra'  lang='pl'>
+Wyczyść paletę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Palette</td>
+<td class='tra'  lang='pl'>
+Usuń paletę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Palette...</td>
+<td class='tra'  lang='pl'>
+Zapisz paletę...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Palette As...</td>
+<td class='tra'  lang='pl'>
+Zapisz paletę jako...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Settings in Palettes</td>
+<td class='tra'  lang='pl'>
+Zapisz ustawienia palet</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Music: </td>
+<td class='tra'  lang='pl'>
+Muzyka: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+{arr} Use Suggested {arr}</td>
+<td class='tra'  lang='pl'>
+{arr} Użyj sugerowanych  {arr}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Style: </td>
+<td class='tra'  lang='pl'>
+Styl: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Voice: </td>
+<td class='tra'  lang='pl'>
+Głos: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Skybox: </td>
+<td class='tra'  lang='pl'>
+Skybox: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Elev Vid: </td>
+<td class='tra'  lang='pl'>
+Winda:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enable or disable particular voice lines, to prevent them from being added.</td>
+<td class='tra'  lang='pl'>
+Włącz lub wyłącz poszczególne ścieżki głosowe, aby zapobiec dodaniu ich.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All Items: </td>
+<td class='tra'  lang='pl'>
+Wszystkie przedmioty: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Export to "{}"...</td>
+<td class='tra'  lang='pl'>
+Wyeksportuj do "{}"...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+File</td>
+<td class='tra'  lang='pl'>
+Plik</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Export</td>
+<td class='tra'  lang='pl'>
+Wyeksportuj</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Game</td>
+<td class='tra'  lang='pl'>
+Dodaj grę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Uninstall from Selected Game</td>
+<td class='tra'  lang='pl'>
+Odinstaluj z wybranej gry</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Backup/Restore Puzzles...</td>
+<td class='tra'  lang='pl'>
+Kopia zapasowa map</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Manage Packages...</td>
+<td class='tra'  lang='pl'>
+Zarządzaj paczkami...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Options</td>
+<td class='tra'  lang='pl'>
+Opcje</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Quit</td>
+<td class='tra'  lang='pl'>
+Wyjdź</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Palette</td>
+<td class='tra'  lang='pl'>
+Paleta</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Clear</td>
+<td class='tra'  lang='pl'>
+Wyczyść</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fill Palette</td>
+<td class='tra'  lang='pl'>
+Wypełnij paletę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Palette</td>
+<td class='tra'  lang='pl'>
+Zapisz paletę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View</td>
+<td class='tra'  lang='pl'>
+Widok</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Palettes</td>
+<td class='tra'  lang='pl'>
+Palety</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Export Options</td>
+<td class='tra'  lang='pl'>
+Opcje eksportu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fill empty spots in the palette with random items.</td>
+<td class='tra'  lang='pl'>
+Wypełnia puste miejsca na palecie losowymi przedmiotami.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copying maps</td>
+<td class='tra'  lang='pl'>
+Kopiowanie map</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Loading maps</td>
+<td class='tra'  lang='pl'>
+Ładowanie map</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Deleting maps</td>
+<td class='tra'  lang='pl'>
+Usuwanie map</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to parse this puzzle file. It can still be backed up.</td>
+<td class='tra'  lang='pl'>
+Analiza mapy nie powiodła się. Kopia zapas. nadal może być stworzona.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No description found.</td>
+<td class='tra'  lang='pl'>
+Nie znaleziono opisu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Coop</td>
+<td class='tra'  lang='pl'>
+Koop.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+SP</td>
+<td class='tra'  lang='pl'>
+1-os.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This filename is already in the backup.Do you wish to overwrite it? ({})</td>
+<td class='tra'  lang='pl'>
+Ten plik już jest w kopii zapasowej. Czy chcesz go nadpisać? ({})</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 Backup</td>
+<td class='tra'  lang='pl'>
+Kopia zapasowa BEE2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No maps were chosen to backup!</td>
+<td class='tra'  lang='pl'>
+Nie wybrano map do skopiowania!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This map is already in the game directory.Do you wish to overwrite it? ({})</td>
+<td class='tra'  lang='pl'>
+Ta mapa już jest w katalogu gry. Czy chcesz ją nadpisać? ({})</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Load Backup</td>
+<td class='tra'  lang='pl'>
+Załaduj kopię</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Backup zip</td>
+<td class='tra'  lang='pl'>
+Kopia zapasowa w zip</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Unsaved Backup</td>
+<td class='tra'  lang='pl'>
+Niezapisana kopia zapas.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Backup As</td>
+<td class='tra'  lang='pl'>
+Zapisz kopię jako</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Confirm Deletion</td>
+<td class='tra'  lang='pl'>
+Potwierdź usunięcie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Do you wish to delete {} map?
+<br></li>
+  <li>Do you wish to delete {} maps?
+<br></li>
+</ol>
+</td>
+<td class='tra'  lang='pl'>
+<ol class='plurals'>
+  <li>Czy chcesz usunąć mapę {}?
+<br></li>
+  <li>Czy chcesz usunąć mapy {}?
+<br></li>
+  <li>Czy chcesz usunąć mapy {}?
+<br></li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Restore:</td>
+<td class='tra'  lang='pl'>
+Przywróć:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Backup:</td>
+<td class='tra'  lang='pl'>
+Skopiuj:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Checked</td>
+<td class='tra'  lang='pl'>
+Zaznaczone</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delete Checked</td>
+<td class='tra'  lang='pl'>
+Usuń zaznaczenie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEEMOD {} - Backup / Restore Puzzles</td>
+<td class='tra'  lang='pl'>
+BEEMOD {} - Kopia zapasowa</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Backup</td>
+<td class='tra'  lang='pl'>
+Nowa kopia</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Open Backup</td>
+<td class='tra'  lang='pl'>
+Otwórz kopię</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save Backup</td>
+<td class='tra'  lang='pl'>
+Zapisz kopię</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove Game</td>
+<td class='tra'  lang='pl'>
+Usuń grę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Game</td>
+<td class='tra'  lang='pl'>
+Gra</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Automatic Backup After Export</td>
+<td class='tra'  lang='pl'>
+Automatyczna kopia zapas. po wyeksportowaniu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Keep (Per Game):</td>
+<td class='tra'  lang='pl'>
+Zachowuj (na grę):</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Backup/Restore Puzzles</td>
+<td class='tra'  lang='pl'>
+Kopia zapasowa map</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item may not be rotated.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot nie może być obrócony.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be pointed in 4 directions.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być skierowany w 4 strony.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be positioned on the sides and center.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczany po bokach i na środku panelu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be centered in two directions, plus on the sides.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być położony na środku w dwóch kierunkach, a także na bokach panelu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be placed like light strips.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być położony jak pasy świetlne.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be rotated on the floor to face 360 degrees.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być obrócony na podłodze o 360 stopni.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item is positioned using a catapult trajectory.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot jest umieszczany używając trajektorii katapulty.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item positions the dropper to hit target locations.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot ustawia dozownik, by dosięgnął docelowej lokalizacji.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item does not accept any inputs.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot nie akceptuje sygnału wejściowego.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item accepts inputs.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot akceptuje sygnał wejściowy.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item has two input types (A and B), using the Input A and B items.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot ma 2 rodzaje sygnału wejścia (A i B), używa przedmiotu "Wejście A i B".</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item does not output.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot nie wysyła sygnału.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item has an output.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może wysyłać sygnał.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item has a timed output.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot wysyła tymczasowy sygnał.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item does not take up any space inside walls.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot nie zajmuje przestrzeni za ścianą.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item takes space inside the wall.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot zajmuje przestrzeń za ścianą.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item cannot be placed anywhere...</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot nie może być położony nigdzie...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can only be attached to ceilings.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony tylko na suficie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can only be placed on the floor.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony tylko na podłodze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be placed on floors and ceilings.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony na podłodze i na suficie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be placed on walls only.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony tylko na ścianach.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be attached to walls and ceilings.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony na ścianach i na suficie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be placed on floors and walls.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być umieszczony na ścianach i na podłodze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be placed in any orientation.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być przymocowany gdziekolwiek.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Alternate Versions</td>
+<td class='tra'  lang='pl'>
+Brak wersji alteratywnych</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Excursion Funnels accept a on/off input and a directional input.</td>
+<td class='tra'  lang='pl'>
+Tuby transportowe akceptują sygnał włącz/wyłącz oraz sygnał zmiany kierunku.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This item can be rotated on the floor to face 360 degrees, for Reflection Cubes only.</td>
+<td class='tra'  lang='pl'>
+Ten przedmiot może być obrócony na podłodze o 360 stopni (dotyczy tylko kostki odbijającej).</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Properties:</td>
+<td class='tra'  lang='pl'>
+Właściwości</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The number of entities used for this item. The Source engine limits this to 2048 in total. This provides a guide to how many of these items can be placed in a map at once.</td>
+<td class='tra'  lang='pl'>
+Liczba jednostek użytych w przedmiocie. Silnik Source ogranicza to do łącznej wartości 2048. To daje wskazówkę, jak wiele elementów na raz może być umieszczonych na mapie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Description:</td>
+<td class='tra'  lang='pl'>
+Opis:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to open a web browser. Do you wish for the URL to be copied to the clipboard instead?</td>
+<td class='tra'  lang='pl'>
+Nie udało się otworzyć przeglądarki. Czy chcesz w zamian skopiować link do schowka?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+More Info&gt;&gt;</td>
+<td class='tra'  lang='pl'>
+Więcej informacji&gt;&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change Defaults...</td>
+<td class='tra'  lang='pl'>
+Zmień domyślne wartości...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change the default settings for this item when placed.</td>
+<td class='tra'  lang='pl'>
+Zmienia domyślne wartości dla tego przedmiotu w edytorze.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Export Failed!</td>
+<td class='tra'  lang='pl'>
+BEE2 - Eksport nieudany!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Compiler file {file} missing. Exit Steam applications, then press OK to verify your game cache. You can then export again.</td>
+<td class='tra'  lang='pl'>
+Brakuje pliku kompilatora {file}. Wyjdź z aplikacji Steam, następnie kliknij OK, aby zweryfikować cache gry. Wtedy możesz wyeksportować ponownie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copying compiler file {file} failed. Ensure {game} is not running.</td>
+<td class='tra'  lang='pl'>
+Kopiowanie pliku kompilatora {file} nie powiodło się. Upewnij się, że gra {game} nie jest uruchomiona.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Ap-Tag Coop gun instance not found!
+<br>Coop guns will not work - verify cache to fix.</td>
+<td class='tra'  lang='pl'>
+Instancja Portal-guna w Kooperacyjnym Aperture Tag nieznaleziona!
+<br>Portal-gun i Paint-gun nie będą tam działały - zweryfikuj cache, aby to naprawić.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Aperture Tag Files Missing</td>
+<td class='tra'  lang='pl'>
+BEE2 - Brakuje Plików Aperture Tag</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select the folder where the game executable is located ({appname})...</td>
+<td class='tra'  lang='pl'>
+Wybierz folder, gdzie znajduje się plik wykonywalny gry ({appname})...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Add Game</td>
+<td class='tra'  lang='pl'>
+BEE2 - Dodaj grę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Find Game Exe</td>
+<td class='tra'  lang='pl'>
+Znajdź plik .exe gry</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Executable</td>
+<td class='tra'  lang='pl'>
+Wykonywalny</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This does not appear to be a valid game folder!</td>
+<td class='tra'  lang='pl'>
+To nie jest prawidłowy folder gry!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portal Stories: Mel doesn't have an editor!</td>
+<td class='tra'  lang='pl'>
+Portal Stories: Mel nie ma edytora!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enter the name of this game:</td>
+<td class='tra'  lang='pl'>
+Wprowadź nazwę gry:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This name is already taken!</td>
+<td class='tra'  lang='pl'>
+Ta nazwa jest już zajęta!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please enter a name for this game!</td>
+<td class='tra'  lang='pl'>
+Wprowadź nazwę dla tej gry!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br> (BEE2 will quit, this is the last game set!)</td>
+<td class='tra'  lang='pl'>
+
+<br>(BEE2 zostanie zamknięte, to jest ostatnia gra w katalogu!)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Wiki...</td>
+<td class='tra'  lang='pl'>
+Wiki...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Original Items...</td>
+<td class='tra'  lang='pl'>
+Oryginalne przedmioty...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Discord Server...</td>
+<td class='tra'  lang='pl'>
+Serwer Discord...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+aerond's Music Changer...</td>
+<td class='tra'  lang='pl'>
+Własna muzyka...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Application Repository...</td>
+<td class='tra'  lang='pl'>
+Repozytorium aplikacji...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Items Repository...</td>
+<td class='tra'  lang='pl'>
+Repozytorium przedmiotów...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Submit Application Bugs...</td>
+<td class='tra'  lang='pl'>
+Zgłoś błędy aplikacji...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Submit Item Bugs...</td>
+<td class='tra'  lang='pl'>
+Zgłoś błędy przedmiotów...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portal 2</td>
+<td class='tra'  lang='pl'>
+Portal 2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Aperture Tag</td>
+<td class='tra'  lang='pl'>
+Aperture Tag</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portal Stories: Mel</td>
+<td class='tra'  lang='pl'>
+Portal Stories: Mel</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Thinking With Time Machine</td>
+<td class='tra'  lang='pl'>
+Thinking With Time Machine</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Close</td>
+<td class='tra'  lang='pl'>
+Zamknij</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Help</td>
+<td class='tra'  lang='pl'>
+Pomoc</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 Credits</td>
+<td class='tra'  lang='pl'>
+Podziękowania BEE2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Credits...</td>
+<td class='tra'  lang='pl'>
+Podziękowania</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Start Position</td>
+<td class='tra'  lang='pl'>
+Pozycja startowa</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+End Position</td>
+<td class='tra'  lang='pl'>
+Pozycja końcowa</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Delay 
+<br>(0=infinite)</td>
+<td class='tra'  lang='pl'>
+Opóźnienie
+<br>(0=nieskończoność)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Properties available!</td>
+<td class='tra'  lang='pl'>
+Brak dostępnych właściwości!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search:</td>
+<td class='tra'  lang='pl'>
+Szukaj:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose a Color</td>
+<td class='tra'  lang='pl'>
+Wybierz kolor</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Debug messages</td>
+<td class='tra'  lang='pl'>
+Konsola debugowania</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Default</td>
+<td class='tra'  lang='pl'>
+Domyślne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Warnings Only</td>
+<td class='tra'  lang='pl'>
+Tylko ostrzeżenia</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Logs - {}</td>
+<td class='tra'  lang='pl'>
+Logi - {}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copy</td>
+<td class='tra'  lang='pl'>
+Kopiuj</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Show:</td>
+<td class='tra'  lang='pl'>
+Pokaż:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Background Music - Base</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę - Główna</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This controls the background music used for a map. Expand the dropdown to set tracks for specific test elements.</td>
+<td class='tra'  lang='pl'>
+Ta opcja kontroluje muzykę w tle użytą do mapy. Rozwiń to menu, aby zobaczyć ścieżki dla konkretnych elementów testowych.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add no music to the map at all. Testing Element-specific music may still be added.</td>
+<td class='tra'  lang='pl'>
+Nie dodawaj muzyki do mapy w ogóle. Muzyka poszczególnych elementów testowych wciąż może być dodana.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Propulsion Gel SFX</td>
+<td class='tra'  lang='pl'>
+Dźwięk żelu przyspieszającego</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Repulsion Gel SFX</td>
+<td class='tra'  lang='pl'>
+Dźwięk żelu repulsyjnego</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Excursion Funnel Music</td>
+<td class='tra'  lang='pl'>
+Muzyka w Tubie Transportowej</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Synced Funnel Music</td>
+<td class='tra'  lang='pl'>
+Zsynchronizowana muzyka w Tubie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Excursion Funnel Music</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę w Tubie Transportowej</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Set the music used while inside Excursion Funnels.</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę graną podczas podróży Tubą Transportową.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Have no music playing when inside funnels.</td>
+<td class='tra'  lang='pl'>
+Nie graj żadnej muzyki podczas podróży Tubą.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Repulsion Gel Music</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę żelu repulsyjnego</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select the music played when players jump on Repulsion Gel.</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę graną podczas podczas skakania na żelu repulsyjnym.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add no music when jumping on Repulsion Gel.</td>
+<td class='tra'  lang='pl'>
+Nie dodawaj żadnej muzyki podczas skakania na żelu repulsyjnym.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Propulsion Gel Music</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę żelu przyspieszającego</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select music played when players have large amounts of horizontal velocity.</td>
+<td class='tra'  lang='pl'>
+Wybierz muzykę graną, gdy gracz ma duże wartości prędkości poziomej.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add no music while running fast.</td>
+<td class='tra'  lang='pl'>
+Nie graj muzyki przy dużych prędkościach.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Base: </td>
+<td class='tra'  lang='pl'>
+Baza: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Funnel:</td>
+<td class='tra'  lang='pl'>
+Tuba: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Bounce:</td>
+<td class='tra'  lang='pl'>
+Odbicie: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Speed:</td>
+<td class='tra'  lang='pl'>
+Prędkość: </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>Launch Game?</td>
+<td class='tra'  lang='pl'>
+
+<br>Uruchomić grę?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>Minimise BEE2?</td>
+<td class='tra'  lang='pl'>
+
+<br>Zminimalizować BEE2?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>Launch Game and minimise BEE2?</td>
+<td class='tra'  lang='pl'>
+
+<br>Uruchomić grę i zminimalizować BEE2?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>Quit BEE2?</td>
+<td class='tra'  lang='pl'>
+
+<br>Wyjść z BEE2?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+
+<br>Launch Game and quit BEE2?</td>
+<td class='tra'  lang='pl'>
+
+<br>Uruchomić grę i wyjść z BEE2?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 Options</td>
+<td class='tra'  lang='pl'>
+Opcje BEE2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Package cache times have been reset. These will now be extracted during the next export.</td>
+<td class='tra'  lang='pl'>
+Czasy cache pakietów zostały zresetowane. Zostaną one wypakowane podczas następnego eksportu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+"Preserve Game Resources" has been disabled.</td>
+<td class='tra'  lang='pl'>
+"Zachowaj zasoby gry" zostało wyłączone.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Packages Reset</td>
+<td class='tra'  lang='pl'>
+Reset paczek</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+General</td>
+<td class='tra'  lang='pl'>
+Ogólne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Windows</td>
+<td class='tra'  lang='pl'>
+Okna</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Development</td>
+<td class='tra'  lang='pl'>
+Tworzenie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+OK</td>
+<td class='tra'  lang='pl'>
+OK</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After Export:</td>
+<td class='tra'  lang='pl'>
+Po eksporcie:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Do Nothing</td>
+<td class='tra'  lang='pl'>
+Nic nie rób</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Minimise BEE2</td>
+<td class='tra'  lang='pl'>
+Minimalizuj BEE2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Quit BEE2</td>
+<td class='tra'  lang='pl'>
+Wyjdź z BEE2</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After exports, do nothing and keep the BEE2 in focus.</td>
+<td class='tra'  lang='pl'>
+Po eksporcie, nic nie rób i zachowaj BEE2 na wierzchu.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After exports, minimise to the taskbar/dock.</td>
+<td class='tra'  lang='pl'>
+Po eksporcie, zminimalizuj do paska zadań.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After exports, quit the BEE2.</td>
+<td class='tra'  lang='pl'>
+Po eksporcie, zamknij BEE2.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Launch Game</td>
+<td class='tra'  lang='pl'>
+Uruchom grę</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+After exporting, launch the selected game automatically.</td>
+<td class='tra'  lang='pl'>
+Po eksporcie, uruchom wybraną grę automatycznie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Play Sounds</td>
+<td class='tra'  lang='pl'>
+Graj dźwięki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pyglet is either not installed or broken.
+<br>Sound effects have been disabled.</td>
+<td class='tra'  lang='pl'>
+Pyglet jest uszkodzony lub niezainstalowany. Efekty dźwiękowe zostały wyłączone.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Reset Package Caches</td>
+<td class='tra'  lang='pl'>
+Zresetuj cache paczek</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Force re-extracting all package resources.</td>
+<td class='tra'  lang='pl'>
+Wymuś ponowne wypakowanie wszystkich źródeł z paczek.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Keep windows inside screen</td>
+<td class='tra'  lang='pl'>
+Pozostaw okna na ekranie.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Prevent sub-windows from moving outside the screen borders. If you have multiple monitors, disable this.</td>
+<td class='tra'  lang='pl'>
+Zapobiegaj wysuwaniu się okien z opcjami poza krawędź ekranu. Jeżeli masz kilka monitorów, wyłącz tą opcję.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Keep loading screens on top</td>
+<td class='tra'  lang='pl'>
+Trzymaj ekrany ładowania na wierzchu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Force loading screens to be on top of other windows. Since they don't appear on the taskbar/dock, they can't be brought to the top easily again.</td>
+<td class='tra'  lang='pl'>
+Wymuś, by ekrany ładowania zawsze znajdowały się na wierzchu. Ponieważ nie wyświetlają się na pasku zadań, nie mogą łatwo zostać wysunięte na wierzch z powrotem.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Reset All Window Positions</td>
+<td class='tra'  lang='pl'>
+Resetuj pozycję wszystkich okien</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log missing entity counts</td>
+<td class='tra'  lang='pl'>
+Loguj brakujące liczby jednostek</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+When loading items, log items with missing entity counts in their properties.txt file.</td>
+<td class='tra'  lang='pl'>
+Podczas ładowania przedmiotów, loguj przedmioty z brakującymi liczbami jednostek do ich plików właściwości (properties.txt)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log when item doesn't have a style</td>
+<td class='tra'  lang='pl'>
+Loguj, kiedy przedmiot nie ma stylu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log items have no applicable version for a particular style.This usually means it will look very bad.</td>
+<td class='tra'  lang='pl'>
+Loguj przedmioty, które nie mają wersji dla aktualnie wybranego stylu. To najczęściej oznacza, że przedmiot będzie wyglądał bardzo źle.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log when item uses parent's style</td>
+<td class='tra'  lang='pl'>
+Loguj, kiedy przedmiot używa stylu pobratymczego</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log when an item reuses a variant from a parent style (1970s using 1950s items, for example). This is usually fine, but may need to be fixed.</td>
+<td class='tra'  lang='pl'>
+Loguj, kiedy przedmiot używa wariantu ze stylu pobratymczego (np. używanie przedmiotu 1950s w mapie w stylu 1970s). Najczęściej wygląda dobrze, ale mogą być niezbędne poprawki.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log missing packfile resources</td>
+<td class='tra'  lang='pl'>
+Loguj brakujące źródła z plików paczek</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Log when the resources a "PackList" refers to are not present in the zip. This may be fine (in a prerequisite zip), but it often indicates an error.</td>
+<td class='tra'  lang='pl'>
+Loguj, gdy zasoby, do których odnosi się "PackList", nie są obecne w pliku zip. Często wskazuje błąd nawet, gdy w wymaganym zip-ie wszystko jest w porządku.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Development Mode</td>
+<td class='tra'  lang='pl'>
+Tryb dewelopera</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Enables displaying additional UI specific for development purposes.</td>
+<td class='tra'  lang='pl'>
+Wyświetlaj dodatkowe UI do celów deweloperskich.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Preserve Game Directories</td>
+<td class='tra'  lang='pl'>
+Zachowaj zasoby gry</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+When exporting, do not copy resources to 
+<br>"bee2/" and "sdk_content/maps/bee2/".
+<br>Only enable if you're developing new content, to ensure it is not overwritten.</td>
+<td class='tra'  lang='pl'>
+Podczas eksportowania, nie kopiuj źródeł do 
+<br>"bee2/" i "sdk_content/maps/bee2/".
+<br>Uruchamiaj tylko, jeżeli tworzysz nową zawartość, aby upewnić się, że nie została nadpisana.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Show Log Window</td>
+<td class='tra'  lang='pl'>
+Pokazuj okno logów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Show the log file in real-time.</td>
+<td class='tra'  lang='pl'>
+Pokazuj plik logów w czasie rzeczywistym.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Force Editor Models</td>
+<td class='tra'  lang='pl'>
+Wymuś modele edytora</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Make all props_map_editor models available for use. Portal 2 has a limit of 1024 models loaded in memory at once, so we need to disable unused ones to free this up.</td>
+<td class='tra'  lang='pl'>
+Sprawia, że wszystkie modele props_map_editor są dostępne do użycia. Portal 2 ma limit 1024 modelów załadowanych w pamięci naraz, dlatego trzeba wyłączyć te nieużywane, aby zwolnić miejsce.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dump All objects</td>
+<td class='tra'  lang='pl'>
+Zachowuj wszystkie obiekty</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dump Items list</td>
+<td class='tra'  lang='pl'>
+Zachowuj listę przedmiotów</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Restart Required!</td>
+<td class='tra'  lang='pl'>
+BEE2 - Niezbędny restart!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Changing enabled packages requires a restart.
+<br>Continue?</td>
+<td class='tra'  lang='pl'>
+Zmiana włączonych paczek wymaga restartu. Kontynuować?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Manage Packages</td>
+<td class='tra'  lang='pl'>
+BEE2 - Ustawienia paczek</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;Last Export&gt;</td>
+<td class='tra'  lang='pl'>
+&lt;Ostatni Eksport&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Blank</td>
+<td class='tra'  lang='pl'>
+Puste</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEEMod</td>
+<td class='tra'  lang='pl'>
+BEEMod</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Portal 2 Collapsed</td>
+<td class='tra'  lang='pl'>
+Portal 2 - Zwinięte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Open "{}" in the default browser?</td>
+<td class='tra'  lang='pl'>
+Otworzyć "{}" w domyślnej przeglądarce?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Do not add anything.</td>
+<td class='tra'  lang='pl'>
+Nie dodawaj niczego.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;None&gt;</td>
+<td class='tra'  lang='pl'>
+&lt;Brak&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Suggested</td>
+<td class='tra'  lang='pl'>
+Sugerowane</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Play a sample of this item.</td>
+<td class='tra'  lang='pl'>
+Odtwórz próbkę tego przedmiotu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Reset to Default</td>
+<td class='tra'  lang='pl'>
+Zresetuj do domyślnych</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Other</td>
+<td class='tra'  lang='pl'>
+Inne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Author: {}</li>
+  <li>Authors: {}</li>
+</ol>
+</td>
+<td class='tra'  lang='pl'>
+<ol class='plurals'>
+  <li>Autor: {}</li>
+  <li>Autorzy: {}</li>
+  <li>Autorzy: {}</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Color: R={r}, G={g}, B={b}</td>
+<td class='tra'  lang='pl'>
+Kolory: R={r}, G={g}, B={b}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Configure Signage</td>
+<td class='tra'  lang='pl'>
+Konfiguruj symbole</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Selected</td>
+<td class='tra'  lang='pl'>
+Wybrane</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Signage: {}</td>
+<td class='tra'  lang='pl'>
+Symbol: {}</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Singleplayer</td>
+<td class='tra'  lang='pl'>
+Tryb jednoosobowy</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cooperative</td>
+<td class='tra'  lang='pl'>
+Tryb kooperacji</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ATLAS (SP/Coop)</td>
+<td class='tra'  lang='pl'>
+ATLAS (1-os./Koop.)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+P-Body (SP/Coop)</td>
+<td class='tra'  lang='pl'>
+P-Body (1-os./Koop.)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Human characters (Bendy and Chell)</td>
+<td class='tra'  lang='pl'>
+Postacie ludzkie (Bendy i Chell)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+AI characters (ATLAS, P-Body, or Coop)</td>
+<td class='tra'  lang='pl'>
+Sztuczna inteligencja (ATLAS, P-Body lub Koop.)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Death - Toxic Goo</td>
+<td class='tra'  lang='pl'>
+Śmierć - Toksyczna maź</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Death - Turrets</td>
+<td class='tra'  lang='pl'>
+Śmierć - Wieżyczki</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Death - Crusher</td>
+<td class='tra'  lang='pl'>
+Śmierć - Zgniatacz</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Death - LaserField</td>
+<td class='tra'  lang='pl'>
+Śmierć - Pole laserowe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Transcript:</td>
+<td class='tra'  lang='pl'>
+Transkrypcja:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Save</td>
+<td class='tra'  lang='pl'>
+Zapisz</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Resp</td>
+<td class='tra'  lang='pl'>
+Odp.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+BEE2 - Configure "{}"</td>
+<td class='tra'  lang='pl'>
+BEE2 - Konfiguracja "{}"</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mid - Chamber</td>
+<td class='tra'  lang='pl'>
+Podczas testu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Lines played during the actual chamber, after specific events have occurred.</td>
+<td class='tra'  lang='pl'>
+Ścieżki grane podczas właściwego testu, po pewnych wydarzeniach.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Responses</td>
+<td class='tra'  lang='pl'>
+Odpowiedzi</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Lines played in response to certain events in Coop.</td>
+<td class='tra'  lang='pl'>
+Ścieżki grane w odpowiedzi na odpowiednie wydarzenia w trybie Kooperacji.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Name!</td>
+<td class='tra'  lang='pl'>
+Brak nazwy!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No Name?</td>
+<td class='tra'  lang='pl'>
+Bez nazwy?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
